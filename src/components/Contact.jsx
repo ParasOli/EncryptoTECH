@@ -1,9 +1,9 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
+import { EarthCanvas } from "./canvas"; // Assuming EarthCanvas is a 3D animation component
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
@@ -16,6 +16,7 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [showSuccessPopup, setShowSuccessPopup] = useState(false);
 
   const handleChange = (e) => {
     const { target } = e;
@@ -33,22 +34,20 @@ const Contact = () => {
 
     emailjs
       .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        "service_ob3bpr4", 
+        "template_6zx65fx", 
         {
           from_name: form.name,
-          to_name: "JavaScript Mastery",
+          to_name: "Encrypto TECH", 
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        "q9p7pA4FSH8PPWGyB" 
       )
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
-
+          setShowSuccessPopup(true);
           setForm({
             name: "",
             email: "",
@@ -57,17 +56,23 @@ const Contact = () => {
         },
         (error) => {
           setLoading(false);
-          console.error(error);
-
+          console.error("EmailJS Error:", error);
           alert("Ahh, something went wrong. Please try again.");
         }
       );
   };
 
+  useEffect(() => {
+    if (showSuccessPopup) {
+      const timer = setTimeout(() => {
+        setShowSuccessPopup(false);
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [showSuccessPopup]);
+
   return (
-    <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
-    >
+    <div className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}>
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
@@ -129,6 +134,30 @@ const Contact = () => {
       >
         <EarthCanvas />
       </motion.div>
+
+      {/* Success Popup */}
+      {showSuccessPopup && (
+        <div className="fixed top-20 right-4 z-50">
+          <motion.div
+            className="bg-blue-600 text-white rounded-lg p-4 shadow-lg"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            exit={{ scale: 0 }}
+            
+          >
+            <h3 className="text-lg font-semibold text-center mb-2">Success!</h3>
+            <p className="text-center mb-4">Your message has been sent successfully!</p>
+            <div className="flex justify-center">
+              <button
+                onClick={() => setShowSuccessPopup(false)} // Close the popup immediately
+                className="bg-blue-900 text-white py-1 px-4 rounded-md hover:bg-blue-700 transition duration-200"
+              >
+                Close
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      )}
     </div>
   );
 };

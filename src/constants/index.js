@@ -8,31 +8,33 @@ import {
   html,
   css,
   reactjs,
-  redux,
   tailwind,
   nodejs,
   mongodb,
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
+  alibaba,
+  burlaz,
   jobit,
   tripguide,
-  threejs,
+  cyberlock,
+  burlazsite,
+  asppy,
+  jabbur,
+  php,
+  asppyPhoto
+
 } from "../assets";
 
 export const navLinks = [
   {
     id: "about",
-    title: "About",
+    title: "About us",
   },
   {
     id: "work",
-    title: "Work",
+    title: "Our Projects",
   },
   {
     id: "contact",
@@ -42,19 +44,19 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Web Security",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Threat Assessment",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Web Development",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Digital Marketing",
     icon: creator,
   },
 ];
@@ -81,8 +83,8 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "cyber lock",
+    icon: cyberlock,
   },
   {
     name: "Tailwind CSS",
@@ -97,8 +99,8 @@ const technologies = [
     icon: mongodb,
   },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: "PHP",
+    icon: php,
   },
   {
     name: "git",
@@ -116,92 +118,90 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Security Researcher",
+    company_name: "Alibaba",
+    icon: alibaba,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "November 2019",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Discovered multiple high-severity security vulnerabilities in Alibaba's websites.",
+      "Recognized and featured in the Hall of Fame for November 2019 for significant contributions to improving security."
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "SECURITY/DEVELOPMENT",
+    company_name: "Jabbur",
+    icon: jabbur,
     iconBg: "#E6DEDD",
     date: "Jan 2021 - Feb 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Currently working on development and security for SafSocial since October 2018.",
+     "Fixed multiple security vulnerabilities to enhance website safety and user trust.", 
+     "Developed and customized website features to improve user experience and functionality.",
+     "Collaborated with cross-functional teams to ensure compliance with security standards.",
+     "Conducted regular security audits and implemented best practices to mitigate risks."
     ],
   },
   {
     title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    company_name: "Asppy Creation",
+    icon: asppy,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "Jan 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed and maintained the Asppy Creation website using PHP.",
+      "Collaborated with designers and developers to build high-quality, responsive features.",
+      "Implemented product listings, shopping cart, and order tracking functionalities.",
+      "Integrated secure payment methods and free shipping on orders over €60.",
+      "Optimized the website for cross-browser compatibility and performance."
     ],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
+    title: "Full Stack Developer",
+    company_name: "Burlaz Legal",
+    icon: burlaz,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: "Feb 2024 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Led the development of Burlaz Legal's website, utilizing React.js and other related technologies to create a dynamic user experience.",
+      "Collaborated with cross-functional teams, including designers and marketing experts, to develop a comprehensive online presence that effectively communicates the brand's value.",
+      "Implemented responsive design principles and ensured cross-browser compatibility to optimize user engagement across various devices.",
+      "Executed digital marketing strategies, including SEO optimization and social media campaigns, to increase website traffic and enhance client outreach.",
+      "Participated in code reviews and provided constructive feedback to ensure the highest quality of code and product performance."
     ],
-  },
+  }
 ];
 
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+      "I thought it was impossible to make a website as beautiful as our product, but this team proved me wrong.",
+    name: "Arvind Basnet",
+    company: "Burlaz Legal",
+    image: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+      "I've never met a web developer who truly cares about their clients' success like you guys does.",
+    name: "Narayan Shrestha",
+    company: "Asppy Creation",
+    image: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
   },
   {
     testimonial:
       "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    name: "Laxmi Bhatta",
+    company: "",
+    image: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
   },
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Legal Services Portal",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-    tags: [
+     "We developed a comprehensive Legal Services Platform for a law professional, designed to streamline client management, case tracking, and document handling.",
+        tags: [
       {
         name: "react",
         color: "blue-text-gradient",
@@ -215,29 +215,29 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
+    image: burlazsite,
     source_code_link: "https://github.com/",
   },
   {
-    name: "Job IT",
+    name: "Asppy Creation",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "A web application that allows users to browse and shop for stylish accessories from the Asppy collection, view detailed product descriptions",
     tags: [
       {
-        name: "react",
+        name: "laravel",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "mysql",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "tailwind",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: asppyPhoto,
+    source_code_link: "",
   },
   {
     name: "Trip Guide",
