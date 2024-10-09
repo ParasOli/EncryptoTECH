@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
-import encrypto from "../assets/company/Encrypto.gif";
+const encrypto = "https://www.imghippo.com/files/OQWIU1728463882.gif"; 
+
 
 const Hero = () => {
   return (
