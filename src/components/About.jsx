@@ -8,7 +8,7 @@ import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='xs:w-[250px] w-full'>
+  <Tilt className='w-full'>
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
@@ -19,15 +19,15 @@ const ServiceCard = ({ index, title, icon }) => (
           scale: 1,
           speed: 450,
         }}
-        className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
+        className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[240px] flex justify-evenly items-center flex-col'
       >
         <img
           src={icon}
           alt='web-development'
-          className='w-16 h-16 object-contain'
+          className='w-12 h-12 object-contain' // Adjusted icon size for small devices
         />
 
-        <h3 className='text-white text-[20px] font-bold text-center'>
+        <h3 className='text-white text-[18px] font-bold text-center'>
           {title}
         </h3>
       </div>
@@ -39,24 +39,23 @@ const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+        <p className={`${styles.sectionSubText} text-[14px] md:text-[16px]`}>Introduction</p> {/* Responsive subtext size */}
+        <h2 className={`${styles.sectionHeadText} text-[20px] md:text-[24px]`}>Overview.</h2> {/* Responsive heading size */}
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+        className='mt-4 text-secondary text-[14px] md:text-[17px] max-w-3xl leading-[30px]' // Responsive paragraph size
       >
-      At Encryptotech, we are a team of skilled software developers and digital marketing experts 
-      specializing in cybersecurity and web development. With extensive experience multiple technologies  
-      to deliver innovative solutions.Our quick learning ability and collaborative approach enable us to work closely with clients, creating
-      efficient, scalable, and user-friendly solutions that address real-world challenges. Additionally, our digital
-      marketing strategies are designed to enhance your online presence and drive engagement. Let’s partner together 
-      to transform your ideas into impactful realities!
-
+        At Encryptotech, we are a team of skilled software developers and digital marketing experts 
+        specializing in cybersecurity and web development. With extensive experience across multiple technologies, 
+        we deliver innovative solutions. Our quick learning ability and collaborative approach enable us to work 
+        closely with clients, creating efficient, scalable, and user-friendly solutions that address real-world challenges. 
+        Additionally, our digital marketing strategies are designed to enhance your online presence and drive engagement. 
+        Let’s partner together to transform your ideas into impactful realities!
       </motion.p>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
+      <div className='mt-20 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-10'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

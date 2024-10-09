@@ -1,12 +1,14 @@
 // Footer.jsx
 import React from 'react';
 import { FaPhone, FaEnvelope } from 'react-icons/fa';
+import logo from '../assets/company/encrypto.png'; // Update the path to your logo image
 
 const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white py-6 mt-auto">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         <div className="flex items-center">
+          {/* <img src={logo} alt="Encrypto TECH Logo" className="h-20" /> */}
           <span className="text-lg font-bold">Encrypto TECH</span>
         </div>
         <div className="flex items-center mt-4 md:mt-0">
