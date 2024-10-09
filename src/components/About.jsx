@@ -47,7 +47,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[14px] md:text-[17px] max-w-3xl leading-[30px]' // Responsive paragraph size
       >
-        At Encrypto, we are a team of skilled software developers and digital marketing experts 
+        At Encrypto Tech, we are a team of skilled software developers and digital marketing experts 
         specializing in cybersecurity and web development. With extensive experience across multiple technologies, 
         we deliver innovative solutions. Our quick learning ability and collaborative approach enable us to work 
         closely with clients, creating efficient, scalable, and user-friendly solutions that address real-world challenges. 
