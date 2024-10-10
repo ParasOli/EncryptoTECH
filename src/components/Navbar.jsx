@@ -27,7 +27,7 @@ const Navbar = () => {
       }`}
     >
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
-       <div className='transition-all duration-300 hover:bg-gray-800 rounded-lg p-1'> {/* Optional background change on hover */}
+       <div className='transition-all duration-300 hover:bg-gray-800 rounded-lg p-4'> {/* Optional background change on hover */}
   <Link
     to='/'
     className='flex items-center'
@@ -37,12 +37,11 @@ const Navbar = () => {
     }}
   >
     <img
-      src={logo}
+      src= 'https://i.imgur.com/lka1Yn6.png'
       alt='logo'
-      className='w-[100px] h-auto object-contain transition-transform duration-300 hover:scale-110'
+      className='w-[170px] h-auto object-contain transition-transform duration-300 hover:scale-110'
     />
     <p className='text-white text-[20px] font-bold cursor-pointer flex items-center -ml-2 transition-colors duration-300 hover:text-blue-400 hover:shadow-lg'>
-      TECH. &nbsp;
       <span className='sm:block hidden'></span>
     </p>
   </Link>
