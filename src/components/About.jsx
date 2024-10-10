@@ -38,13 +38,13 @@ const ServiceCard = ({ index, title, icon }) => (
 const About = () => {
   return (
     <>
-      <motion.div variants={textVariant(0.2, 0.5)}>
+      <motion.div variants={textVariant(0.2, 0.2)}>
         <p className={`${styles.sectionSubText} text-[14px] md:text-[16px]`}>Introduction</p>
         <h2 className={`${styles.sectionHeadText} text-[20px] md:text-[24px]`}>Overview.</h2>
       </motion.div>
 
       <motion.p
-        variants={fadeIn("", "", 0.05, 0.5)} 
+        variants={fadeIn("", "", 0.05, 0.2)} 
         className='mt-4 text-secondary text-[14px] md:text-[17px] max-w-3xl leading-[30px]'
       >
         At Encrypto, we are a team of skilled software developers and digital marketing experts 
