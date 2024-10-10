@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
-import { EarthCanvas } from "./canvas"; // Assuming EarthCanvas is a 3D animation component
+import { EarthCanvas } from "./canvas"; 
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
@@ -143,14 +143,13 @@ const Contact = () => {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             exit={{ scale: 0 }}
-            
           >
             <h3 className="text-lg font-semibold text-center mb-2">Success!</h3>
             <p className="text-center mb-4">Your message has been sent successfully!</p>
             <div className="flex justify-center">
               <button
                 onClick={() => setShowSuccessPopup(false)} // Close the popup immediately
-                className="bg-blue-900 text-white py-1 px-4 rounded-md hover:bg-blue-700 transition duration-200"
+                className="bg-blue-900 text-white py-1 px-4 rounded-md hover:bg-blue-700 transition duration-2000"
               >
                 Close
               </button>
